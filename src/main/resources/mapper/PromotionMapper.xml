@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huilong.domestic.dao.PromotionMapper">
+
+    <resultMap id="BaseResultMap" type="com.huilong.domestic.table.PromotionTable">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
+        <result property="serviceType" column="service_type" jdbcType="JAVA_OBJECT"/>
+        <result property="picUrl" column="pic_url" jdbcType="VARCHAR"/>
+        <result property="webPicUrl" column="web_pic_url" jdbcType="VARCHAR"/>
+        <result property="amount" column="amount" jdbcType="DECIMAL"/>
+        <result property="webPageType" column="web_page_type" jdbcType="JAVA_OBJECT"/>
+        <result property="webPagePosition" column="web_page_position" jdbcType="JAVA_OBJECT"/>
+        <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
+        <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,`name`,title,content,service_type,pic_url,
+        web_pic_url,amount,web_page_type,
+        web_page_position,start_time,end_time,
+        create_time,update_time
+    </sql>
+</mapper>

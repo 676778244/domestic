@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huilong.domestic.dao.SalesmenMapper">
+
+    <resultMap id="BaseResultMap" type="com.huilong.domestic.table.SalesmenTable">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="nickName" column="nick_name" jdbcType="VARCHAR"/>
+        <result property="phone" column="phone" jdbcType="VARCHAR"/>
+        <result property="rqCode1" column="RQ_code1" jdbcType="VARCHAR"/>
+        <result property="rqCode2" column="RQ_code2" jdbcType="VARCHAR"/>
+        <result property="rqCode3" column="RQ_code3" jdbcType="VARCHAR"/>
+        <result property="serviceType" column="service_type" jdbcType="JAVA_OBJECT"/>
+        <result property="cover" column="cover" jdbcType="BOOLEAN"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,nick_name,phone,
+        RQ_code1,RQ_code2,RQ_code3,
+        service_type,cover,create_time,update_time
+    </sql>
+</mapper>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huilong.domestic.dao.CustomerInvitationMapper">
+
+    <resultMap id="BaseResultMap" type="com.huilong.domestic.table.CustomerInvitationTable">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="inviteId" column="invite_id" jdbcType="BIGINT"/>
+        <result property="beInvitedId" column="be_invited_id" jdbcType="BIGINT"/>
+        <result property="entered" column="entered" jdbcType="BOOLEAN"/>
+        <result property="activityId" column="activity_id" jdbcType="BIGINT"/>
+        <result property="phone" column="phone" jdbcType="VARCHAR"/>
+        <result property="enteredTime" column="entered_time" jdbcType="TIMESTAMP"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,invite_id,be_invited_id,
+        entered,activity_id,
+        entered_time,create_time,update_time
+    </sql>
+
+
+    <select id="customerInvitationPageList" resultType="com.huilong.domestic.table.virtual.CustomerInvitationExt">
+        SELECT distinct
+        ci.id,ci.invite_id,ci.be_invited_id,
+        ci.entered,ci.activity_id,
+        ci.entered_time,ci.create_time as invite_time,ci.update_time
+        FROM `hg_customer_invitation` ci LEFT JOIN `hg_customer` c ON ci.invite_id = c.id OR ci.be_invited_id = c.id
+        <where>
+            <if test="inviteId!=null">
+                AND ci.invite_id = #{inviteId}
+            </if>
+            <if test="inviteNickName!=null and inviteNickName!=''">
+                AND c.nick_name LIKE concat('%',#{inviteNickName},'%')
+            </if>
+            <if test="invitePhone!=null and invitePhone!=''">
+                AND c.phone LIKE concat('%',#{invitePhone},'%')
+            </if>
+            <if test="beInvitedId!=null">
+                AND ci.invite_id = #{beInvitedId}
+            </if>
+            <if test="beInvitedNickName!=null and beInvitedNickName!=''">
+                AND c.nick_name LIKE concat('%',#{beInvitedNickName},'%')
+            </if>
+            <if test="beInvitedPhone!=null and beInvitedPhone!=''">
+                AND c.phone LIKE concat('%',#{beInvitedPhone},'%')
+            </if>
+            <if test="startEnteredTime != null and endEnteredTime != null">
+                AND ci.entered_time BETWEEN #{startEnteredTime} and #{endEnteredTime}
+            </if>
+        </where>
+        ORDER BY ci.create_time DESC
+    </select>
+
+</mapper>
