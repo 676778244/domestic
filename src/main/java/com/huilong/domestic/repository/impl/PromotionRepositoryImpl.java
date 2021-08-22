@@ -47,7 +47,7 @@ public class PromotionRepositoryImpl implements PromotionRepository {
     public boolean save(PromotionEntry promotionEntry) {
         PromotionTable promotionTable = new PromotionTable();
         BeanUtils.copyProperties(promotionEntry, promotionTable);
-        if (mapper.insert(promotionTable) == 1){
+        if (mapper.insert(promotionTable) == 1) {
             promotionEntry.setId(promotionTable.getId());
             return true;
         }
@@ -58,7 +58,7 @@ public class PromotionRepositoryImpl implements PromotionRepository {
     public boolean edit(PromotionEntry promotionEntry) {
         PromotionTable promotionTable = new PromotionTable();
         BeanUtils.copyProperties(promotionEntry, promotionTable);
-        if (mapper.updateById(promotionTable) == 1){
+        if (mapper.updateById(promotionTable) == 1) {
             return true;
         }
         return false;
@@ -67,8 +67,8 @@ public class PromotionRepositoryImpl implements PromotionRepository {
     @Override
     public Optional<PromotionEntry> promotion(Long aId) {
         PromotionTable promotionTable = mapper.selectById(aId);
-        if (Objects.nonNull(promotionTable)){
-            return Optional.of(new PromotionEntry(promotionTable.getId(), name, title, content, promotionTable.getServiceType(),promotionTable.getPicUrl(),promotionTable.getWebPicUrl(),promotionTable.getAmount(),promotionTable.getWebPageType(),promotionTable.getWebPagePosition(),promotionTable.getStartTime(),promotionTable.getEndTime(),promotionTable.getCreateTime(),promotionTable.getUpdateTime()));
+        if (Objects.nonNull(promotionTable)) {
+            return Optional.of(new PromotionEntry(promotionTable.getId(), promotionTable.getName(), promotionTable.getTitle(), promotionTable.getContent(), promotionTable.getServiceType(), promotionTable.getPicUrl(), promotionTable.getWebPicUrl(), promotionTable.getAmount(), promotionTable.getWebPageType(), promotionTable.getWebPagePosition(), promotionTable.getStartTime(), promotionTable.getEndTime(), promotionTable.getCreateTime(), promotionTable.getUpdateTime()));
         }
         return Optional.empty();
     }

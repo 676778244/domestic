@@ -50,7 +50,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     public Optional<CustomerEntry> customer(Long id) {
         CustomerTable customerTable = customerMapper.selectById(id);
         if (Objects.nonNull(customerTable)) {
-            return Optional.of(new CustomerEntry(customerTable.getId(), customerTable.getUnionId(), customerTable.getOpenId(), customerTable.getNickName(), customerTable.getHeadImg(), city, province, customerTable.getGender(), customerTable.getAge(), customerTable.getPhone(), customerTable.getPullTime(), customerTable.getCreateTime(), customerTable.getUpdateTime()));
+            return Optional.of(new CustomerEntry(customerTable.getId(), customerTable.getUnionId(), customerTable.getOpenId(), customerTable.getNickName(), customerTable.getHeadImg(), customerTable.getCity(), customerTable.getProvince(), customerTable.getGender(), customerTable.getAge(), customerTable.getPhone(), customerTable.getPullTime(), customerTable.getCreateTime(), customerTable.getUpdateTime()));
 
         }
         return Optional.empty();
