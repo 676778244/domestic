@@ -14,6 +14,9 @@ public enum WebPageType implements IEnum {
      * 页面类型
      */
     HOME_PAGE("home_page", 10, "首页"),
+    LOOKING_SERVICE("home_page", 20, "找服务"),
+    HOUSEKEEPING_COLLEGE("home_page", 30, "家政大学"),
+
     NULL("", 9999999, "空"),
     ;
 
