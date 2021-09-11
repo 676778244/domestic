@@ -1,5 +1,6 @@
 package com.huilong.domestic.model.input;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.huilong.domestic.enums.ServiceType;
 import com.huilong.domestic.enums.WebPagePosition;
 import com.huilong.domestic.enums.WebPageType;
@@ -66,11 +67,13 @@ public class PromotionInput {
      * 开始时间
      */
     @ApiModelProperty("活动开始时间")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private  LocalDateTime startDate;
     /**
      * 结束时间
      */
     @ApiModelProperty("活动结束时间")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private  LocalDateTime endDate;
 
 }

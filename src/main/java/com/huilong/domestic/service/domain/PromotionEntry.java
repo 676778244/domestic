@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @Getter
 public class PromotionEntry {
-    public PromotionEntry(Long id, String name, String title, String content, ServiceType serviceType, String picUrl, String webPicUrl, BigDecimal amount, WebPageType webPageType, WebPagePosition webPagePosition, LocalDateTime startDate, LocalDateTime endDate, LocalDateTime createTime, LocalDateTime updateTime) {
+    public PromotionEntry(Long id, String name, String title, String content, ServiceType serviceType, String picUrl, String webPicUrl, BigDecimal amount, WebPageType webPageType, WebPagePosition webPagePosition, LocalDateTime startTime, LocalDateTime endTime, LocalDateTime createTime, LocalDateTime updateTime) {
         this.id = id;
         this.name = name;
         this.title = title;
@@ -23,8 +23,8 @@ public class PromotionEntry {
         this.amount = amount;
         this.webPageType = webPageType;
         this.webPagePosition = webPagePosition;
-        this.startDate = startDate;
-        this.endDate = endDate;
+        this.startTime = startTime;
+        this.endTime = endTime;
         this.createTime = createTime;
         this.updateTime = updateTime;
     }
@@ -76,11 +76,11 @@ public class PromotionEntry {
     /**
      * 开始时间
      */
-    private final LocalDateTime startDate;
+    private final LocalDateTime startTime;
     /**
      * 结束时间
      */
-    private final LocalDateTime endDate;
+    private final LocalDateTime endTime;
     /**
      * 创建时间
      */
