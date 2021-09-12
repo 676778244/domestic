@@ -14,8 +14,14 @@ import java.io.Serializable;
 public enum ServiceType implements IEnum {
     /**
      * 服务类型
+     * 家政服务,养老，护幼，保洁，保姆，家政大学
      */
     HOUSEKEEPING("housekeeping", 100, "家政服务"),
+    ELDERLY_CARE("elderly_care",200,"养老"),
+    CARE_OF_YOUNG("care_of_young",300,"护幼"),
+    CLEAN("clean",400,"保洁"),
+    NURSE("nurse",500,"保姆"),
+    HOUSEKEEPING_COLLEGE("housekeeping_college",600,"家政大学"),
     NULL("", -99, "空"),
     ;
 

@@ -11,7 +11,7 @@ import java.io.Serializable;
 
 @Getter
 @AllArgsConstructor
-@ApiModel("页面类型")
+@ApiModel("枚举-页面类型")
 public enum WebPageType implements IEnum {
     /**
      * 页面类型
