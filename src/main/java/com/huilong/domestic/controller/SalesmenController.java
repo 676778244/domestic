@@ -60,7 +60,7 @@ public class SalesmenController {
         return new DataResponse(DataRespCodeEnum.SUCCESS, salesmenVO);
     }
 
-    @GetMapping(value = "/update/{id}")
+    @PostMapping(value = "/update/{id}")
     @ApiOperation("更新销售人员二维码")
     public DataResponse<Boolean> update(@PathVariable @ApiParam(value = "销售人员ID", example = "1") Long id,
                                         @RequestParam(value = "RQCode1", required = false) @ApiParam(value = "销售人员二维码1") String RQCode1,
