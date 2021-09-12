@@ -63,11 +63,11 @@ public class SalesmenController {
     @PostMapping(value = "/update/{id}")
     @ApiOperation("更新销售人员二维码")
     public DataResponse<Boolean> update(@PathVariable @ApiParam(value = "销售人员ID", example = "1") Long id,
-                                        @RequestParam(value = "RQCode1", required = false) @ApiParam(value = "销售人员二维码1") String RQCode1,
-                                        @RequestParam(value = "RQCode2", required = false) @ApiParam(value = "销售人员二维码2") String RQCode2,
-                                        @RequestParam(value = "RQCode3", required = false) @ApiParam(value = "销售人员二维码3") String RQCode3) {
+                                        @RequestParam(value = "RQCode1", required = false) @ApiParam(value = "销售人员二维码1") String rqCode1,
+                                        @RequestParam(value = "RQCode2", required = false) @ApiParam(value = "销售人员二维码2") String rqCode2,
+                                        @RequestParam(value = "RQCode3", required = false) @ApiParam(value = "销售人员二维码3") String rqCode3) {
 
-        return new DataResponse(DataRespCodeEnum.SUCCESS, service.changeRQCode(id, RQCode1, RQCode2, RQCode3));
+        return new DataResponse(DataRespCodeEnum.SUCCESS, service.changeRQCode(id, rqCode1, rqCode2, rqCode3));
 
     }
 
