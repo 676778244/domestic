@@ -61,12 +61,12 @@ public class PromotionVO {
     /**
      * 页面类型
      */
-    @ApiModelProperty("页面类型")
+    @ApiModelProperty("活动输出信息-页面类型")
     private  WebPageType webPageType;
     /**
      * 页面位置
      */
-    @ApiModelProperty("页面位置")
+    @ApiModelProperty("活动输出信息-页面位置")
     private  WebPagePosition webPagePosition;
     /**
      * 开始时间

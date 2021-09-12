@@ -3,6 +3,7 @@ package com.huilong.domestic.enums;
 import com.baomidou.mybatisplus.annotation.IEnum;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -15,8 +16,11 @@ public enum WebPageType implements IEnum {
     /**
      * 页面类型
      */
+    @ApiModelProperty("首页")
     HOME_PAGE("home_page", 10, "首页"),
+    @ApiModelProperty("找服务")
     LOOKING_SERVICE("home_page", 20, "找服务"),
+    @ApiModelProperty("家政大学")
     HOUSEKEEPING_COLLEGE("home_page", 30, "家政大学"),
 
     NULL("", -99, "空"),

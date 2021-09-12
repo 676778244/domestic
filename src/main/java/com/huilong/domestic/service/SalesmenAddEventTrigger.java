@@ -21,9 +21,9 @@ public class SalesmenAddEventTrigger {
     @EventListener(SalesmenAddDomainEvent.class)
     public void handleAdmissionApplyEventDealAttachment(SalesmenAddDomainEvent salesmenAddDomainEvent) {
         SalesmenEntry salesmenEntry = salesmenAddDomainEvent.getSalesmenEntry();
-        groupService.add(new GroupEntry(null, salesmenEntry.getId(), salesmenEntry.getRQCode1(), 0, 1, salesmenEntry.getCover() ? GROUP_NOT_LIMIT : GROUP_LIMIT, LocalDateTime.now()));
-        groupService.add(new GroupEntry(null, salesmenEntry.getId(), salesmenEntry.getRQCode2(), 0, 1, salesmenEntry.getCover() ? GROUP_NOT_LIMIT : GROUP_LIMIT, LocalDateTime.now()));
-        groupService.add(new GroupEntry(null, salesmenEntry.getId(), salesmenEntry.getRQCode3(), 0, 1, salesmenEntry.getCover() ? GROUP_NOT_LIMIT : GROUP_LIMIT, LocalDateTime.now()));
+        groupService.add(new GroupEntry(null, salesmenEntry.getId(), salesmenEntry.getRqCode1(), 0, 1, salesmenEntry.getCover() ? GROUP_NOT_LIMIT : GROUP_LIMIT, LocalDateTime.now()));
+        groupService.add(new GroupEntry(null, salesmenEntry.getId(), salesmenEntry.getRqCode2(), 0, 1, salesmenEntry.getCover() ? GROUP_NOT_LIMIT : GROUP_LIMIT, LocalDateTime.now()));
+        groupService.add(new GroupEntry(null, salesmenEntry.getId(), salesmenEntry.getRqCode3(), 0, 1, salesmenEntry.getCover() ? GROUP_NOT_LIMIT : GROUP_LIMIT, LocalDateTime.now()));
 
     }
 }

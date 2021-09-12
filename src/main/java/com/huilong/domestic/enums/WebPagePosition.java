@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 @Getter
 @AllArgsConstructor
-@ApiModel("页面位置")
+@ApiModel("枚举-页面位置")
 public enum WebPagePosition implements IEnum {
     /**
      * 页面位置

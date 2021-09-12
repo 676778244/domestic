@@ -29,17 +29,17 @@ public class SalesmenVO {
      * 二维码1
      */
     @ApiModelProperty("二维码1")
-    private String RQCode1;
+    private String rqCode1;
     /**
      * 二维码2
      */
     @ApiModelProperty("二维码2")
-    private String RQCode2;
+    private String rqCode2;
     /**
      * 二维码3
      */
     @ApiModelProperty("二维码3")
-    private String RQCode3;
+    private String rqCode3;
     /**
      * 是否兜底老师
      */
@@ -48,6 +48,6 @@ public class SalesmenVO {
     /**
      * 服务类型
      */
-    @ApiModelProperty("服务类型")
+    @ApiModelProperty("销售人员输出信息-服务类型")
     private ServiceType serviceType;
 }

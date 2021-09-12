@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
-@ApiModel("活动新增/编辑入参")
+@ApiModel("活动新增/编辑入参-v1")
 public class PromotionInput {
 
     /**
@@ -36,7 +36,7 @@ public class PromotionInput {
     /**
      * 服务类型
      */
-    @ApiModelProperty("服务类型")
+    @ApiModelProperty("活动新增/编辑入参-服务类型")
     private  ServiceType serviceType;
     /**
      * 图片地址
@@ -56,12 +56,12 @@ public class PromotionInput {
     /**
      * 页面类型
      */
-    @ApiModelProperty("页面类型")
+    @ApiModelProperty("活动新增/编辑入参-页面类型")
     private  WebPageType webPageType;
     /**
      * 页面位置
      */
-    @ApiModelProperty("页面位置")
+    @ApiModelProperty("活动新增/编辑入参-页面位置")
     private WebPagePosition webPagePosition;
     /**
      * 开始时间

@@ -21,18 +21,18 @@ public class SalesmenInput {
     /**
      * 二维码1
      */
-    @ApiModelProperty("二维码1")
-    private  String RQCode1;
+    @ApiModelProperty("新增/修改销售人员入参-二维码1")
+    private  String rqCode1;
     /**
      * 二维码2
      */
-    @ApiModelProperty("二维码2")
-    private  String RQCode2;
+    @ApiModelProperty("新增/修改销售人员入参-二维码2")
+    private  String rqCode2;
     /**
      * 二维码3
      */
-    @ApiModelProperty("二维码3")
-    private  String RQCode3;
+    @ApiModelProperty("新增/修改销售人员入参-二维码3")
+    private  String rqCode3;
     /**
      * 是否兜底老师
      */

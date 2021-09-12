@@ -43,7 +43,7 @@ public class SalesmenController {
     @PostMapping(value = "/add")
     @ApiOperation("销售人员新增")
     public DataResponse<Boolean> add(@RequestBody SalesmenInput input) {
-        SalesmenEntry salesmenEntry = new SalesmenEntry(null, input.getNickName(), input.getPhone(), input.getRQCode1(), input.getRQCode2(), input.getRQCode3(), input.getCover(), input.getServiceType(), LocalDateTime.now(), LocalDateTime.now());
+        SalesmenEntry salesmenEntry = new SalesmenEntry(null, input.getNickName(), input.getPhone(), input.getRqCode1(), input.getRqCode2(), input.getRqCode3(), input.getCover(), input.getServiceType(), LocalDateTime.now(), LocalDateTime.now());
         return new DataResponse(DataRespCodeEnum.SUCCESS, service.add(salesmenEntry));
     }
 

@@ -17,9 +17,9 @@ public class SalesmenEntry {
         this.id = id;
         this.nickName = nickName;
         this.phone = phone;
-        RQCode1 = rqCode1;
-        RQCode2 = rqCode2;
-        RQCode3 = rqCode3;
+        this.rqCode1 = rqCode1;
+        this.rqCode2 = rqCode2;
+        this.rqCode3 = rqCode3;
         this.cover = cover;
         this.serviceType = serviceType;
         this.createTime = createTime;
@@ -43,16 +43,16 @@ public class SalesmenEntry {
     /**
      * 二维码1
      */
-    private String RQCode1;
+    private String rqCode1;
 
     /**
      * 二维码2
      */
-    private String RQCode2;
+    private String rqCode2;
     /**
      * 二维码3
      */
-    private String RQCode3;
+    private String rqCode3;
     /**
      * 是否兜底老师
      */
@@ -75,16 +75,16 @@ public class SalesmenEntry {
         this.updateTime = updateTime;
     }
 
-    private void setRQCode1(String RQCode1) {
-        this.RQCode1 = RQCode1;
+    private void setRQCode1(String rqCode1) {
+        this.rqCode1 = rqCode1;
     }
 
-    private void setRQCode2(String RQCode2) {
-        this.RQCode2 = RQCode2;
+    private void setRQCode2(String rqCode2) {
+        this.rqCode2 = rqCode2;
     }
 
-    private void setRQCode3(String RQCode3) {
-        this.RQCode3 = RQCode3;
+    private void setRQCode3(String rqCode3) {
+        this.rqCode3 = rqCode3;
     }
 
     /**

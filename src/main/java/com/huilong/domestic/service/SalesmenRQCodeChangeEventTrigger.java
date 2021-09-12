@@ -23,9 +23,9 @@ public class SalesmenRQCodeChangeEventTrigger {
     public void handleAdmissionApplyEventDealAttachment(SalesmenRQCodeChangeDomainEvent salesmenRQCodeChangeDomainEvent) {
         Long aSalesmenId = salesmenRQCodeChangeDomainEvent.getSalesmenEntry().getId();
         Optional<SalesmenEntry> salesmenEntryOptional = salesmenService.salesmenEntry(aSalesmenId);
-        String rqCode1 = salesmenEntryOptional.get().getRQCode1();
-        String rqCode2 = salesmenEntryOptional.get().getRQCode2();
-        String rqCode3 = salesmenEntryOptional.get().getRQCode3();
+        String rqCode1 = salesmenEntryOptional.get().getRqCode1();
+        String rqCode2 = salesmenEntryOptional.get().getRqCode2();
+        String rqCode3 = salesmenEntryOptional.get().getRqCode3();
         List<GroupEntry> groupEntries = groupService.salesmenGroups(aSalesmenId);
         groupEntries.sort(Comparator.comparing(GroupEntry::getCreateTime));
         GroupEntry groupEntry1 = groupEntries.get(0);
