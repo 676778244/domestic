@@ -68,8 +68,8 @@ public class PromotionController {
         return new DataResponse(DataRespCodeEnum.SUCCESS, promotionVO);
     }
 
-    @GetMapping(value = "/update/{id}")
-    @ApiOperation("更新活动")
+    @PostMapping(value = "/update/{id}")
+    @ApiOperation("更新活动-v1")
     public DataResponse<Boolean> update(@PathVariable @ApiParam(value = "活动ID", example = "1") Long id, @RequestBody PromotionInput input) {
         PromotionEntry promotionEntry = new PromotionEntry(id, input.getName(), input.getTitle(), input.getContent(), input.getServiceType(), input.getPicUrl(), input.getWebPicUrl(), input.getAmount(), input.getWebPageType(), input.getWebPagePosition(), input.getStartDate(), input.getEndDate(), null, LocalDateTime.now());
         return new DataResponse(DataRespCodeEnum.SUCCESS, service.edit(promotionEntry));
