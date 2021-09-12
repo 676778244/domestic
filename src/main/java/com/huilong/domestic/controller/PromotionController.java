@@ -51,7 +51,7 @@ public class PromotionController {
     }
 
     @PostMapping(value = "/add")
-    @ApiOperation("活动新增")
+    @ApiOperation("活动新增-v1")
     public DataResponse<Boolean> add(@RequestBody PromotionInput input) {
         PromotionEntry promotionEntry = new PromotionEntry(null, input.getName(), input.getTitle(), input.getContent(), input.getServiceType(), input.getPicUrl(), input.getWebPicUrl(), input.getAmount(), input.getWebPageType(), input.getWebPagePosition(), input.getStartDate(), input.getEndDate(), LocalDateTime.now(), LocalDateTime.now());
         return new DataResponse(DataRespCodeEnum.SUCCESS, service.add(promotionEntry));

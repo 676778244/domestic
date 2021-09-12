@@ -19,9 +19,9 @@ public enum WebPageType implements IEnum {
     @ApiModelProperty("首页")
     HOME_PAGE("home_page", 10, "首页"),
     @ApiModelProperty("找服务")
-    LOOKING_SERVICE("home_page", 20, "找服务"),
+    LOOKING_SERVICE("looking_service", 20, "找服务"),
     @ApiModelProperty("家政大学")
-    HOUSEKEEPING_COLLEGE("home_page", 30, "家政大学"),
+    HOUSEKEEPING_COLLEGE("housekeeping_college", 30, "家政大学"),
 
     NULL("", -99, "空"),
     ;

@@ -3,6 +3,7 @@ package com.huilong.domestic.controller;
 import com.huilong.domestic.model.base.DataRespCodeEnum;
 import com.huilong.domestic.model.base.DataResponse;
 import com.huilong.domestic.model.base.XPage;
+import com.huilong.domestic.model.input.SalesRQCodeChangeInput;
 import com.huilong.domestic.model.input.SalesmenInput;
 import com.huilong.domestic.model.input.SalesmenQuery;
 import com.huilong.domestic.model.output.SalesmenVO;
@@ -63,11 +64,9 @@ public class SalesmenController {
     @PostMapping(value = "/update/{id}")
     @ApiOperation("更新销售人员二维码")
     public DataResponse<Boolean> update(@PathVariable @ApiParam(value = "销售人员ID", example = "1") Long id,
-                                        @RequestParam(value = "rqCode1", required = false) @ApiParam(value = "销售人员二维码1") String rqCode1,
-                                        @RequestParam(value = "rqCode2", required = false) @ApiParam(value = "销售人员二维码2") String rqCode2,
-                                        @RequestParam(value = "rqCode3", required = false) @ApiParam(value = "销售人员二维码3") String rqCode3) {
+                                        @RequestBody SalesRQCodeChangeInput salesRQCode) {
 
-        return new DataResponse(DataRespCodeEnum.SUCCESS, service.changeRQCode(id, rqCode1, rqCode2, rqCode3));
+        return new DataResponse(DataRespCodeEnum.SUCCESS, service.changeRQCode(id, salesRQCode.getRqCode1(), salesRQCode.getRqCode2(), salesRQCode.getRqCode3()));
 
     }
 
