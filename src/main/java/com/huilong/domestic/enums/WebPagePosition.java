@@ -2,6 +2,7 @@ package com.huilong.domestic.enums;
 
 import com.baomidou.mybatisplus.annotation.IEnum;
 import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -9,6 +10,7 @@ import java.io.Serializable;
 
 @Getter
 @AllArgsConstructor
+@ApiModel("页面位置")
 public enum WebPagePosition implements IEnum {
     /**
      * 页面位置
@@ -22,7 +24,7 @@ public enum WebPagePosition implements IEnum {
     SEVEN("seven", 70, "位置七"),
     EIGHT("eight", 80, "位置八"),
     NINE("nine", 90, "位置九"),
-    NULL("", 9999999, "空"),
+    NULL("", -99, "空"),
 
     ;
 

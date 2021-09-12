@@ -2,15 +2,15 @@ package com.huilong.domestic.enums;
 
 import com.baomidou.mybatisplus.annotation.IEnum;
 import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 import java.io.Serializable;
 
 @Getter
 @AllArgsConstructor
+@ApiModel("性别")
 public enum Gender implements IEnum {
     /**
      * 性别
@@ -18,7 +18,7 @@ public enum Gender implements IEnum {
     MALE("male", 10, "男"),
     FEMALE("female", 20, "女"),
     NONE("none", 30, "未知"),
-    NULL("", 9999999, "空"),
+    NULL("", -99, "空"),
 
     ;
 

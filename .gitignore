@@ -33,3 +33,5 @@ build/
 .vscode/
 /log/spring.log
 /log/domestic.log
+/log/domestic.log.2021-09-10.0.gz
+/log/domestic.log.2021-09-11.0.gz

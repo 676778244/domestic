@@ -4,23 +4,26 @@ import com.huilong.domestic.enums.Gender;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDateTime;
 
 @Data
 @ApiModel("客户输出信息")
 public class CustomerVO {
+    public String getId() {
+        return id + "";
+    }
+
     /**
      * 用户编号
      */
     @ApiModelProperty("用户编号")
-    private  Long id;
+    private Long id;
     /**
      * 昵称
      */
     @ApiModelProperty("昵称")
-    private  String nickName;
+    private String nickName;
     /**
      * 头像
      */
@@ -40,20 +43,20 @@ public class CustomerVO {
      * 性别
      */
     @ApiModelProperty("性别")
-    private  Gender gender;
+    private Gender gender;
     /**
      * 年龄
      */
     @ApiModelProperty("年龄")
-    private  Integer age;
+    private Integer age;
     /**
      * 手机号
      */
     @ApiModelProperty("手机号")
-    private  String phone;
+    private String phone;
     /**
      * 拉新时间
      */
     @ApiModelProperty("拉新时间")
-    private  LocalDateTime pullTime;
+    private LocalDateTime pullTime;
 }

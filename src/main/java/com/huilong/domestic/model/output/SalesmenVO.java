@@ -8,41 +8,46 @@ import lombok.Data;
 @Data
 @ApiModel("销售人员输出信息")
 public class SalesmenVO {
+
+    public String getId() {
+        return id + "";
+    }
+
     @ApiModelProperty("销售人员编号")
-    private  Long id;
+    private Long id;
     /**
      * 昵称
      */
     @ApiModelProperty("昵称")
-    private  String nickName;
+    private String nickName;
     /**
      * 手机号
      */
     @ApiModelProperty("手机号")
-    private  String phone;
+    private String phone;
     /**
      * 二维码1
      */
     @ApiModelProperty("二维码1")
-    private  String RQCode1;
+    private String RQCode1;
     /**
      * 二维码2
      */
     @ApiModelProperty("二维码2")
-    private  String RQCode2;
+    private String RQCode2;
     /**
      * 二维码3
      */
     @ApiModelProperty("二维码3")
-    private  String RQCode3;
+    private String RQCode3;
     /**
      * 是否兜底老师
      */
     @ApiModelProperty("是否兜底老师")
-    private  boolean cover;
+    private boolean cover;
     /**
      * 服务类型
      */
     @ApiModelProperty("服务类型")
-    private  ServiceType serviceType;
+    private ServiceType serviceType;
 }

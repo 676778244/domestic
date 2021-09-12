@@ -14,6 +14,10 @@ import java.time.LocalDateTime;
 @ApiModel("活动输出信息")
 public class PromotionVO {
 
+    public String getId() {
+        return id + "";
+    }
+
     @ApiModelProperty("主键")
     private  Long id;
     /**
