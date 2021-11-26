@@ -2,6 +2,13 @@ server:
   port: 8080
 
 spring:
+  cloud:
+    alicloud:
+      access-key: xxxx
+      secret-key: xxxx
+      oss:
+        endpoint: xxxx
+        bucket: xxxx
   application:
     name: domestic
   datasource:
