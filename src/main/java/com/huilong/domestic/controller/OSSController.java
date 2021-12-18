@@ -4,6 +4,7 @@ import com.aliyun.oss.OSS;
 import com.aliyun.oss.common.utils.BinaryUtil;
 import com.aliyun.oss.model.MatchMode;
 import com.aliyun.oss.model.PolicyConditions;
+import com.huilong.domestic.model.base.DataResponse;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +36,7 @@ public class OSSController {
     private String accessId;
 
     @PostMapping("/policy")
-    public Map<String, String> policy() {
+    public DataResponse<Map> policy() {
         //https://gjsbzll-sqhzqy.oss-cn-beijing.aliyuncs.com/dog.png?versionId=ChNWE2OGQ0ZjczYy
         String host = "https://" + bucket + "." + endpoint; // host的格式为 bucketname.endpoint
         // callbackUrl为 上传回调服务器的URL，请将下面的IP和Port配置为您自己的真实信息。
@@ -73,7 +74,7 @@ public class OSSController {
             ossClient.shutdown();
         }
         log.info("respMap:"+respMap);
-        return respMap;
+        return new DataResponse(respMap);
     }
 
 }
